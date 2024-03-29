@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../vendor/autoload.php';
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -30,7 +31,6 @@ class MainCommand extends Command
             case 'age':
                 $filteredData = $this->filterByAge($data);
                 break;
-            // Add cases for other analysis types here
         }
 
         $output->writeln('Analysis results:');
