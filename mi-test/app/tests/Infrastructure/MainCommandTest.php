@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../vendor/autoload.php';
+
 namespace App\Tests\Infrastructure;
 
 use PHPUnit\Framework\TestCase;
@@ -9,7 +11,6 @@ class MainCommandTest extends TestCase
 {
     public function testFilterByAge(): void
     {
-        
         $mainCommand = new MainCommand();
         $data = [
             ['Nname' => 'John', 'Bbirthday' => '2000-01-01'], 
