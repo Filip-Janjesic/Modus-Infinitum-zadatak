@@ -26,6 +26,6 @@ class Seeder extends Database
     public function rollbackImport(string $tableName, int $count): void
     {
         $sql = "DELETE FROM $tableName ORDER BY id DESC LIMIT $count";
-        $this->connection->exec($sql);
+        $this->getConnection()->exec($sql);
     }
 }
